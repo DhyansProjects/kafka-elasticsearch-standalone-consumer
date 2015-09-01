@@ -1,0 +1,36 @@
+{
+
+
+    "package": {
+        "name": "kafka-elasticsearch-standalone-consumer",
+        "repo": "publicmavenrepo",
+        "subject": "dhyansprojects",
+        "desc": "I was pushed completely automatically",
+        "website_url": "www.jfrog.com",
+        "issue_tracker_url": "https://github.com/bintray/bintray-client-java/issues",
+        "vcs_url": "https://github.com/DhyansProjects/kafka-elasticsearch-standalone-consumer.git",
+        "github_use_tag_release_notes": true,
+        "github_release_notes_file": "RELEASE.txt",
+        "licenses": ["AGPL-V3"],
+        "labels": ["cool", "awesome"],
+        "public_download_numbers": true,
+        "public_stats": true,
+        "attributes": [{"name": "att1", "values" : ["val1"], "type": "string"},
+                       {"name": "att2", "values" : [1, 2.2, 4], "type": "number"},
+                       {"name": "att5", "values" : ["2014-12-28T19:43:37+0100"], "type": "date"}]
+    },
+
+
+    "version": {
+        "name": "1.0.0"
+    },
+
+
+    "files":
+        [
+        {"includePattern": "*.jar",
+         "excludePattern": ".*/do-not-deploy/.*",
+         "uploadPattern": "libs/$2"}
+        ],
+    "publish": true
+}

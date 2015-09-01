@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.elasticsearch.kafka.consumer</groupId>
 	<artifactId>kafka-es-consumer</artifactId>
-	<version>${buildId}.${buildNumber}</version>
+	<version>1.${TRAVIS_BUILD_NUMBER}</version>
 	<packaging>jar</packaging>
 	<description>Kafka standalone indexer for elasticsearch</description>
 	<inceptionYear>2014</inceptionYear>
@@ -193,6 +193,39 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<sourceEncoding>UTF-8</sourceEncoding>
+					<repoToken>nvU7JtDgae1cOlQzL52GyyjrfKWEs3Vjr</repoToken>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.2.201409121644</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>bintray-id-kafka-elastic-search</id>
+			<url>https://dl.bintray.com/dhyansprojects/publicrepo/mavenpackage;publish=1</url>
+		</repository>
+	</distributionManagement>
 </project>
